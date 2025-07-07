@@ -27,7 +27,7 @@ jobs:
 
 
         - run: | 
-                ls .
+                ls -a .
                 echo "All files of pwd listed above"
 
 
@@ -44,7 +44,7 @@ jobs:
         
         - name: run multiple commands
           run: |
-            ls -a .
+            ls .
             echo "All files of pwd listed above"
         - run: |
             dir
