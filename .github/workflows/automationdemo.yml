@@ -1,0 +1,32 @@
+name: Automation Demo
+
+# When we push to our default branches, 
+# we want to run this workflow.
+on: 
+   push:
+    branches:
+      - main
+
+# Define the things to do within the workflow.
+jobs:
+    # run a job called ourfirstjob
+    # on the latest version of Ubuntu.
+    ourfirstjob:
+        runs-on: ubuntu-latest
+        # steps are the things we want to do
+        steps:
+        - run: echo "Hello, World!"
+        - run: | 
+                ls .
+                echo "All files of pwd listed above"
+
+
+    oursecondjob:
+        runs-on: windows-latest
+        # steps are the things we want to do
+        steps:
+        - run: echo "Hello, World!"
+        - run: | 
+                ls .
+                echo "All files of pwd listed above"
+
